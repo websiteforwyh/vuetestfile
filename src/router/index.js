@@ -1,19 +1,32 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '../views/header/HomeView.vue';
+import MysqlView from '../views/side/MysqlView.vue';
 
 const routes = [
   {
-    path: '/',
+    path: '/home',
     name: 'home',
     component: HomeView,
+    children: [
+      {
+        path: 'mysql',
+        component: MysqlView,
+      },
+      {
+        path: 'vue',
+        component: () => import('../views/side/VueView.vue'),
+      },
+    ],
+  },
+  // 重定向主页路由/home
+  {
+    path: '/',
+    redirect: '/home',
   },
   {
     path: '/about',
     name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/header/AboutView.vue'),
+    component: () => import('../views/header/AboutView.vue'),
   },
 ];
 

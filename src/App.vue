@@ -1,26 +1,12 @@
 <template>
   <nav class="header">
     <div>
-      <router-link to="/">Home</router-link>
+      <router-link to="/home" exact active-class="active-link">Home</router-link>
     </div>
     <div>
-      <router-link to="/about">About</router-link>
+      <router-link to="/about" exact active-class="active-link">About</router-link>
     </div>
   </nav>
-  <div class="parent">
-    <div class="side">
-      1234
-    </div>
-    <div class="box">
-      <div class="bar">
-        <router-link to="/">Home</router-link>
-      </div>
-      <!-- <div class="iframe">
-        <iframe src="/vuetest/src/components/HelloWorld.vue" frameborder="0" title="HomeView">
-        </iframe>
-      </div> -->
-    </div>
-  </div>
   <router-view />
 </template>
 
@@ -37,10 +23,6 @@
   color: #2c3e50;
 }
 
-.parent {
-  display: flex;
-}
-
 .box {
   display: block;
 }
@@ -49,10 +31,6 @@
   background: #333;
   height: 80px;
   display: flex;
-}
-
-.header div {
-  flex-shrink: 0;
 }
 
 .header a {
@@ -65,6 +43,7 @@
   padding: 31px;
   display: inline-block;
   cursor: pointer;
+  flex-shrink: 0;
 }
 
 .header div:hover {
@@ -75,16 +54,19 @@
   color: green;
 }
 
+.active-link{
+  color: green
+}
+
 .bar {
-  border: 2px, groove, #333;
+  border: 2px, groove, white;
   display: flex;
-  flex-wrap: wrap;
-  width: 100%;
   height: 20px;
+  position: relative;
+  left: 1px;
 }
 
 .bar a {
-  text-decoration: none;
   color: #333;
 }
 
@@ -93,18 +75,38 @@
 }
 
 .side {
-  border: 2px, groove, black;
-  height: 635px;
-  width: 150px;
-  display: inline-block;
+  border: 2px, groove, white;
+  height: 633px;
+  width: 180px;
+}
+
+.side-list {
+  text-align: center;
+  padding: 20px;
+  border: 4px groove white;
+}
+
+.side-list a {
+  text-decoration: none;
+}
+
+.box {
+  width: 99.7%;
+  height: 633px;
+  border: 2px, groove, white;
+  display: flex;
+}
+
+.container {
+  width: 100%;
+  overflow: auto;
+  padding-right: 2px;
 }
 
 .content {
-  height: 500px;
-}
-
-.iframe iframe{
-  width: 100%;
-  height: 100%;
+  padding: 20px;
 }
 </style>
+
+<script>
+</script>
