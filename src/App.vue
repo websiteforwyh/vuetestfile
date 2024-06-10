@@ -6,6 +6,9 @@
     <div>
       <router-link to="/about" exact active-class="active-link">About</router-link>
     </div>
+    <div>
+      <router-link to="/umusic" exact active-class="active-link">UMusic</router-link>
+    </div>
   </nav>
   <router-view />
 </template>
@@ -104,7 +107,7 @@
 }
 
 .content {
-  padding: 20px;
+  padding: 10%;
 }
 </style>
 

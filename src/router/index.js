@@ -28,6 +28,11 @@ const routes = [
     name: 'about',
     component: () => import('../views/header/AboutView.vue'),
   },
+  {
+    path: '/umusic',
+    name: 'umusic',
+    component: () => import('../views/header/UMusic.vue'),
+  },
 ];
 
 const router = createRouter({
