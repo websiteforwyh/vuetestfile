@@ -53,16 +53,21 @@
   background: AliceBlue;
 }
 
+.header a.active{
+  color: green;
+}
+
+/* 子路由激活样式 */
+a.router-link-active {
+  color: blue; /* 或者你希望的其他颜色 */
+}
+
 .header a.router-link-exact-active {
   color: green;
 }
 
-.active-link {
-  color: green
-}
-
 .bar {
-  border: 2px, groove, white;
+  border: 2px groove white;
   display: flex;
   height: 20px;
   position: relative;
@@ -78,8 +83,8 @@
 }
 
 .side {
-  border: 2px, groove, white;
-  height: 633px;
+  border: 2px groove white;
+  height: 100%;
   width: 180px;
 }
 
@@ -96,7 +101,8 @@
 .box {
   width: 99.7%;
   height: 633px;
-  border: 2px, groove, white;
+  height: 851px;
+  border: 2px groove white;
   display: flex;
 }
 
@@ -110,6 +116,3 @@
   padding: 10%;
 }
 </style>
-
-<script>
-</script>
