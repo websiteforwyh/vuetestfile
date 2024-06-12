@@ -44,6 +44,15 @@
       <img :src="require('@/assets/VueNote/runningserve.png')" alt="Description">
       <li>vue示例：在浏览器打开网址就可以看到官方默认生成的示例，初学者最好的办法就是在此基础更改内容自己感受</li>
       <p>不建议一下改太多东西或直接删了文件，否则报错的时候想解决却无从入手</p>
+
+      <br><h4>modules</h4>
+      <img :src="require('@/assets/VueNote/modules.png')" alt="Description">
+      <li>此文件夹存放运行环境</li>
+
+      <error>错误：'vue-cli-service' 不是内部或外部命令，也不是可运行的程序或批处理文件。</error><br>
+      <answer>解答：需要安装modules</answer>
+      <p>安装modules指令:<span>npm install</span></p>
+      <img :src="require('@/assets/VueNote/moduleserror.png')" alt="Description">
     </div>
   </div>
 </template>
@@ -90,15 +99,19 @@ span {
   background-color: yellowgreen;
 }
 
-red {
-  color: red;
-}
-
 img {
   width: 900px;
 }
 
+red{
+  color: red;
+}
+
 yellow {
   background-color: yellow;
+}
+
+error{
+  background-color: red;
 }
 </style>

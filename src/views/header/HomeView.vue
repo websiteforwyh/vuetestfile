@@ -10,6 +10,7 @@
     </aside>
     <router-view />
     <div v-if="!isChildRoute" class="container" :style="containerStyle">
+      <!-- 内容只在父路由显示 -->
       <div class="bar">
         <router-link to="/home">Home</router-link>
       </div>
@@ -55,20 +56,6 @@ export default {
         };
       }
     },
-    // updateBoxStyle() {
-    //   this.$nextTick(() => {
-    //     const screenHeight = screen.height;
-    //     if (screenHeight < 1080) {
-    //       this.boxStyle = {
-    //         padding: '10%'
-    //       };
-    //     } else {
-    //       this.boxStyle = {
-    //         padding: '5% 20%'
-    //       };
-    //     }
-    //   });
-    // },
   },
 };
 </script>

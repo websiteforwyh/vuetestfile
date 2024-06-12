@@ -26,10 +26,6 @@
   color: #2c3e50;
 }
 
-.box {
-  display: block;
-}
-
 .header {
   background: #333;
   height: 80px;
@@ -39,7 +35,13 @@
 .header a {
   font-weight: bold;
   color: blue;
+  /* 父路由默认字体颜色 */
   text-decoration: none;
+}
+
+.header a.active-link {
+  /* 父路由被选中时的字体颜色 */
+  color: green;
 }
 
 .header div {
@@ -53,33 +55,12 @@
   background: AliceBlue;
 }
 
-.header a.active{
-  color: green;
-}
-
-/* 子路由激活样式 */
-a.router-link-active {
-  color: blue; /* 或者你希望的其他颜色 */
-}
-
-.header a.router-link-exact-active {
-  color: green;
-}
-
-.bar {
+.box {
+  width: 99.7%;
+  height: 633px;
+  height: 851px;
   border: 2px groove white;
   display: flex;
-  height: 20px;
-  position: relative;
-  left: 1px;
-}
-
-.bar a {
-  color: #333;
-}
-
-.bar a:hover {
-  color: paleturquoise;
 }
 
 .side {
@@ -96,14 +77,29 @@ a.router-link-active {
 
 .side-list a {
   text-decoration: none;
+  color: black;
 }
 
-.box {
-  width: 99.7%;
-  height: 633px;
-  height: 851px;
+
+a.router-link-active {
+  /* 子路由被选中样式 */
+  color: blue;
+}
+
+.bar {
   border: 2px groove white;
   display: flex;
+  height: 20px;
+  position: relative;
+  left: 1px;
+}
+
+.bar a {
+  color: #333;
+}
+
+.bar a:hover {
+  color: paleturquoise;
 }
 
 .container {
