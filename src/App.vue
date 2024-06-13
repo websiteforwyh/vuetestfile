@@ -15,19 +15,19 @@
 
 <script>
 export default {
-  // computed: {
-  //   containerScrolled() {
-  //     return this.$store.state.containerScrolled;
-  //   }
-  // },
-  // watch: {
-  //   containerScrolled(newValue) {
-  //     if (newValue) {
-  //       // 处理滚动条状态变化
-  //       console.log('Container has been scrolled!');
-  //     }
-  //   }
-  // },
+  computed: {
+    containerScrolled() {
+      return this.$store.state.containerScrolled;
+    }
+  },
+  watch: {
+    containerScrolled(newValue) {
+      if (newValue) {
+        // 处理滚动条状态变化
+        console.log('Container has been scrolled!');
+      }
+    }
+  },
   methods: {
     goTo(path) {
       this.$router.push(path);
