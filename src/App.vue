@@ -15,24 +15,31 @@
 
 <script>
 export default {
-  computed: {
-    containerScrolled() {
-      return this.$store.state.containerScrolled;
-    }
-  },
-  watch: {
-    containerScrolled(newValue) {
-      if (newValue) {
-        // 处理滚动条状态变化
-        console.log('Container has been scrolled!');
-      }
-    }
-  },
+  // data() {
+  //   return {
+  //     isAtTop: true,
+  //   };
+  // },
+  // computed: {
+  //   containerScrolled() {
+  //     return this.$store.state.isAtTop;
+  //   }
+  // },
+  // watch: {
+  //   containerScrolled(newValue) {
+  //     if (newValue) {
+  //       // 处理滚动条状态变化
+  //       this.isAtTop = true
+  //     } else {
+  //       this.isAtTop = false
+  //     }
+  //   },
+  // },
   methods: {
-    goTo(path) {
+    goTo(path) {  // 点击控件触发路由
       this.$router.push(path);
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -112,7 +119,7 @@ html {
   color: black;
 }
 
-.side-list a:hover{
+.side-list a:hover {
   color: paleturquoise;
 }
 
@@ -147,7 +154,6 @@ a.router-link-active:hover {
 }
 
 .content {
-  height: 100%;
   padding: 10%;
 }
 

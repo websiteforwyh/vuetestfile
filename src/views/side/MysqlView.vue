@@ -18,7 +18,6 @@
 export default {
   data() {
     return {
-      contentStyle: {},
       isAtTop: true,
       container: null
     };

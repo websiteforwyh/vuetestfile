@@ -2,13 +2,13 @@ import { createStore } from 'vuex'
 
 export default createStore({
   state: {
-    containerScrolled: false,
+    isAtTop: false
   },
   getters: {
   },
   mutations: {
-    setContainerScrolled(state, payload) {
-      state.containerScrolled = payload;
+    isAtTop(state, payload) {
+      state.isAtTop = payload;
     }
   },
   actions: {
