@@ -1,5 +1,5 @@
 <template>
-  <div class="box" :style="boxStyle">
+  <div class="box">
     <aside class="side">
       <div class="side-list">
         <router-link to="/home/mysql">Mysql</router-link>
@@ -9,7 +9,7 @@
       </div>
     </aside>
     <router-view />
-    <div v-if="!isChildRoute" class="container" :style="containerStyle">
+    <div v-if="!isChildRoute" class="container">
       <!-- 内容只在父路由显示 -->
       <div class="bar">
         <router-link to="/home">Home</router-link>
@@ -24,37 +24,10 @@
 
 <script>
 export default {
-  data() {
-    return {
-      boxStyle: {}
-    };
-  },
   computed: {
-    // 计算属性，检查当前路由是否为父路由
     isChildRoute() {
       // 如果当前路由的路径为父路由的路径加上子路由的路径，则说明当前路由为子路由
       return this.$route.fullPath.includes('/home/');
-    },
-  },
-  mounted() {
-    this.updateBoxStyle();
-    window.addEventListener('resize', this.updateBoxStyle);
-  },
-  beforeDestroy() {
-    window.removeEventListener('resize', this.updateBoxStyle);
-  },
-  methods: {
-    updateBoxStyle() {
-      const screenHeight = window.screen.height;
-      if (screenHeight <= 840) {
-        this.boxStyle = {
-          height: '633px',
-        };
-      } else {
-        this.boxStyle = {
-          height: '851px'
-        };
-      }
     },
   },
 };
